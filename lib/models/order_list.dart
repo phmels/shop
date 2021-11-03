@@ -12,7 +12,10 @@ class OrderList with ChangeNotifier {
   List<Order> _items = [];
   final String _token;
 
-  OrderList(this._token, this._items);
+  OrderList([
+    this._token = '',
+    this._items = const [],
+  ]);
 
   List<Order> get items {
     return [..._items];
